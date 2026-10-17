@@ -1,0 +1,1386 @@
+<!DOCTYPE html>
+<html lang="ru" data-theme="dark">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+<title>Итоговое собеседование 2027 | Русский язык • 9 класс • Допуск к ОГЭ</title>
+<meta name="description" content="Тренажёр для подготовки к итоговому собеседованию по русскому языку в 9 классе (допуск к ОГЭ). Спецификация ФИПИ 2027." />
+<link rel="icon" href="favicon.ico" type="image/x-icon" />
+<style>
+  * { box-sizing: border-box; }
+  :root, [data-theme="dark"] {
+    --bg: #1a0510;
+    --bg-grad1: rgba(233, 30, 99, 0.25);
+    --bg-grad2: rgba(194, 24, 91, 0.18);
+    --card: rgba(60, 10, 30, 0.85);
+    --card-soft: rgba(233, 30, 99, 0.1);
+    --border: rgba(233, 30, 99, 0.3);
+    --border-strong: rgba(233, 30, 99, 0.6);
+    --text: #ffe4ec; --text-soft: #ffc1d6; --muted: #ff80ab;
+    --accent: #e91e63; --accent2: #c2185b; --accent-text: #ffffff;
+    --light-yellow: rgba(233, 30, 99, 0.15);
+    --yellow: #e91e63; --orange: #f59e0b;
+    --green: #10b981; --green-light: rgba(16, 185, 129, 0.15); --green-border: rgba(16, 185, 129, 0.4);
+    --blue: #3b82f6; --blue-light: rgba(59, 130, 246, 0.15);
+    --red: #ef4444; --red-light: rgba(239, 68, 68, 0.15);
+    --purple: #a855f7; --purple-light: rgba(168, 85, 247, 0.15);
+    --shadow: 0 16px 40px rgba(233, 30, 99, 0.25);
+    --header-bg: rgba(26, 5, 16, 0.95);
+  }
+  [data-theme="light"] {
+    --bg: #fff0f5;
+    --bg-grad1: rgba(233, 30, 99, 0.15);
+    --bg-grad2: rgba(194, 24, 91, 0.1);
+    --card: #ffffff;
+    --card-soft: #fce4ec;
+    --border: #f8bbd0;
+    --border-strong: #e91e63;
+    --text: #4a0025; --text-soft: #880e4f; --muted: #ad1457;
+    --accent: #c2185b; --accent2: #ad1457; --accent-text: #ffffff;
+    --light-yellow: #fce4ec;
+    --yellow: #e91e63; --orange: #d97706;
+    --green: #059669; --green-light: #dcfce7; --green-border: #bbf7d0;
+    --blue: #2563eb; --blue-light: #dbeafe;
+    --red: #dc2626; --red-light: #fee2e2;
+    --purple: #9333ea; --purple-light: #f3e8ff;
+    --shadow: 0 4px 12px rgba(194, 24, 91, 0.15);
+    --header-bg: rgba(255, 255, 255, 0.95);
+  }
+  body { margin: 0; font-family: system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif;
+    background: radial-gradient(circle at top left,var(--bg-grad1),transparent 30%),
+                radial-gradient(circle at top right,var(--bg-grad2),transparent 28%),var(--bg);
+    color: var(--text); line-height: 1.55; min-height: 100vh; transition: background-color 0.3s, color 0.3s; }
+  .container { width: min(1200px, 94%); margin: 0 auto; }
+  header { position: sticky; top: 0; z-index: 50; backdrop-filter: blur(14px); background: var(--header-bg); border-bottom: 1px solid var(--border); }
+  .topbar { display: flex; align-items: center; justify-content: space-between; gap: 16px; padding: 12px 0; flex-wrap: wrap; }
+  .brand { display: flex; align-items: center; gap: 12px; }
+  .brand-logo { width: 44px; height: 44px; border-radius: 14px; object-fit: cover; background: var(--light-yellow); border: 1px solid var(--border-strong); flex: 0 0 auto; }
+  .brand strong { display: block; font-size: 15px; line-height: 1.2; }
+  .brand small { color: var(--muted); font-size: 11px; }
+  nav { display: flex; gap: 14px; flex-wrap: wrap; }
+  nav a { color: var(--text-soft); text-decoration: none; font-weight: 700; font-size: 13px; transition: color 0.2s; }
+  nav a:hover { color: var(--accent); }
+  .top-controls { display: flex; align-items: center; gap: 6px; flex-wrap: wrap; margin-left: auto; }
+  .icon-btn { display: inline-flex; align-items: center; gap: 5px; border: 1px solid var(--border-strong); background: var(--light-yellow); color: var(--muted); border-radius: 999px; padding: 7px 11px; font-weight: 800; cursor: pointer; font-size: 12px; transition: all .2s; }
+  .icon-btn:hover { background: var(--card-soft); color: var(--accent); transform: translateY(-1px); }
+  .lang-option { opacity: .6; } .lang-option.active { opacity: 1; color: var(--accent); }
+  .timer-widget { display: flex; align-items: center; gap: 5px; background: var(--light-yellow); border: 1px solid var(--border-strong); border-radius: 12px; padding: 5px 7px; }
+  #timerDisplay { font-variant-numeric: tabular-nums; font-weight: 900; min-width: 80px; text-align: center; font-size: 13px; }
+  .timer-btn { border: 0; background: var(--card-soft); color: var(--text); border-radius: 9px; padding: 5px 8px; cursor: pointer; font-size: 13px; }
+  .timer-btn:hover { background: var(--light-yellow); }
+  .timer-widget.warning #timerDisplay { color: var(--orange); }
+  .timer-widget.danger #timerDisplay { color: var(--red); animation: pulse 1s infinite; }
+  @keyframes pulse { 0%,100%{opacity:1} 50%{opacity:.5} }
+  .selector-bar { background: var(--card-soft); border-bottom: 1px solid var(--border); padding: 10px 0; position: sticky; top: 66px; z-index: 45; backdrop-filter: blur(10px); }
+  .selector-row { display: flex; align-items: center; gap: 10px; flex-wrap: wrap; }
+  .selector-label { font-size: 13px; font-weight: 800; color: var(--muted); }
+  .selector-btn { padding: 8px 14px; border-radius: 10px; border: 1px solid var(--border-strong); background: var(--light-yellow); color: var(--text); cursor: pointer; font-size: 13px; font-weight: 800; transition: all .2s; }
+  .selector-btn:hover { background: var(--card-soft); transform: translateY(-1px); }
+  .selector-btn.active { background: linear-gradient(135deg,var(--accent2),var(--accent)); color: var(--accent-text); border-color: transparent; }
+  .hero { display: grid; grid-template-columns: 1.15fr 0.85fr; gap: 24px; padding: 40px 0 24px; align-items: start; }
+  .badge { display: inline-flex; align-items: center; padding: 7px 12px; border-radius: 999px; background: var(--light-yellow); border: 1px solid var(--border-strong); color: var(--accent); font-size: 12px; font-weight: 700; }
+  h1 { font-size: clamp(26px, 4vw, 44px); line-height: 1.05; margin: 14px 0; }
+  h1 .accent { color: var(--accent); }
+  .lead { color: var(--text-soft); max-width: 72ch; font-size: 16px; }
+  .actions { display: flex; gap: 10px; flex-wrap: wrap; margin-top: 20px; }
+  .btn { border: 0; border-radius: 13px; padding: 13px 18px; font-weight: 850; cursor: pointer; background: linear-gradient(135deg,var(--accent2),var(--accent)); color: var(--accent-text); box-shadow: 0 12px 30px rgba(233,30,99,.3); font-size: 14px; transition: all .2s; }
+  .btn:hover { transform: translateY(-2px); box-shadow: 0 16px 36px rgba(233,30,99,.4); }
+  .btn:active { transform: translateY(0); }
+  .btn.secondary { background: var(--light-yellow); border: 1px solid var(--border-strong); color: var(--text); box-shadow: none; }
+  .btn.small { padding: 9px 13px; font-size: 13px; border-radius: 11px; }
+  .btn:disabled { opacity: .5; cursor: not-allowed; transform: none; }
+  .panel { background: var(--card); border: 1px solid var(--border-strong); border-radius: 22px; padding: 20px; box-shadow: var(--shadow); }
+  .panel h3 { margin: 0 0 14px; font-size: 18px; }
+  .metrics { display: grid; grid-template-columns: repeat(3,1fr); gap: 10px; margin: 14px 0; }
+  .metric { background: var(--light-yellow); border-radius: 14px; padding: 12px; border: 1px solid var(--border); min-height: 76px; }
+  .metric strong { display: block; font-size: 20px; margin-bottom: 3px; font-variant-numeric: tabular-nums; }
+  .metric span { color: var(--muted); font-size: 11px; }
+  .metric.blue { background: var(--blue-light); border-color: var(--blue); }
+  .metric.green { background: var(--green-light); border-color: var(--green-border); }
+  .metric.purple { background: var(--purple-light); border-color: var(--purple); }
+  progress { width: 100%; height: 10px; border-radius: 999px; overflow: hidden; appearance: none; background: var(--light-yellow); border: none; margin-top: 10px; }
+  progress::-webkit-progress-bar { background: var(--light-yellow); border-radius: 999px; }
+  progress::-webkit-progress-value { background: linear-gradient(90deg,var(--accent2),var(--accent)); border-radius: 999px; transition: width .4s; }
+  .note { color: var(--muted); font-size: 12px; margin-top: 10px; }
+  section { padding: 26px 0; scroll-margin-top: 160px; }
+  .section-head { display: flex; justify-content: space-between; align-items: end; gap: 16px; margin-bottom: 16px; flex-wrap: wrap; }
+  h2 { font-size: clamp(22px,2.8vw,32px); margin: 0; line-height: 1.15; }
+  .sub { color: var(--muted); margin: 5px 0 0; font-size: 14px; }
+  .grid { display: grid; grid-template-columns: repeat(auto-fit,minmax(245px,1fr)); gap: 14px; }
+  .card { background: var(--card); border: 1px solid var(--border); border-radius: 20px; padding: 18px; box-shadow: var(--shadow); transition: all .2s; }
+  .card:hover { transform: translateY(-2px); }
+  .card h3 { margin: 0 0 8px; font-size: 18px; }
+  .card p { color: var(--text-soft); margin: 0 0 14px; font-size: 14px; }
+  .warn-card { border-color: rgba(245,158,11,.4); } .danger-card { border-color: rgba(239,68,68,.4); } .success-card { border-color: var(--green-border); }
+  .info-card { border-color: var(--blue); } .purple-card { border-color: var(--purple); }
+  .tag { display: inline-block; padding: 5px 10px; border-radius: 999px; font-size: 11px; font-weight: 850; margin-bottom: 8px; background: var(--light-yellow); border: 1px solid var(--border-strong); color: var(--accent); }
+  .tag.red { background: rgba(239,68,68,.14); border-color: rgba(239,68,68,.4); color: var(--red); }
+  .tag.green { background: var(--green-light); border-color: var(--green-border); color: var(--green); }
+  .tag.orange { background: rgba(245,158,11,.14); border-color: rgba(245,158,11,.4); color: var(--orange); }
+  .tag.blue { background: var(--blue-light); border-color: var(--blue); color: var(--blue); }
+  .tag.purple { background: var(--purple-light); border-color: var(--purple); color: var(--purple); }
+  .mini-list { margin: 0; padding-left: 18px; color: var(--text-soft); font-size: 13px; }
+  .mini-list li { margin: 6px 0; }
+  .task-block { background: var(--card); border: 1px solid var(--border); border-radius: 22px; padding: 22px; margin-bottom: 20px; box-shadow: var(--shadow); animation: slideIn .3s; }
+  @keyframes slideIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
+  .task-header { display: flex; align-items: center; justify-content: space-between; gap: 12px; margin-bottom: 16px; flex-wrap: wrap; }
+  .task-number { display: inline-block; padding: 5px 11px; border-radius: 999px; background: var(--light-yellow); border: 1px solid var(--border-strong); color: var(--accent); font-size: 13px; font-weight: 850; }
+  .task-number.mod1 { background: var(--blue-light); border-color: var(--blue); color: var(--blue); }
+  .task-number.mod2 { background: var(--green-light); border-color: var(--green-border); color: var(--green); }
+  .task-number.mod3 { background: rgba(245,158,11,.14); border-color: var(--orange); color: var(--orange); }
+  .task-number.mod4 { background: var(--purple-light); border-color: var(--purple); color: var(--purple); }
+  .task-sub { color: var(--muted); font-size: 13px; }
+  .task-timer { display: inline-flex; align-items: center; gap: 6px; background: var(--light-yellow); border: 1px solid var(--border-strong); border-radius: 12px; padding: 6px 10px; font-weight: 800; font-size: 14px; font-variant-numeric: tabular-nums; color: var(--accent); }
+  .task-timer.warning { color: var(--orange); border-color: var(--orange); }
+  .task-timer.danger { color: var(--red); border-color: var(--red); animation: pulse 1s infinite; }
+  .task-timer-btn { border: 0; background: var(--card-soft); color: var(--text); border-radius: 8px; padding: 3px 7px; cursor: pointer; font-size: 12px; }
+  .text-box { background: var(--card-soft); border: 1px solid var(--border); border-radius: 14px; padding: 16px 18px; margin: 12px 0; font-size: 15px; line-height: 1.7; white-space: pre-wrap; }
+  .text-box .text-meta { color: var(--muted); font-size: 12px; margin-top: 8px; text-align: right; }
+  .question-block { background: var(--card-soft); border-left: 4px solid var(--accent); border-radius: 0 14px 14px 0; padding: 14px 16px; margin: 12px 0; }
+  .question-block .q-label { display: inline-block; font-size: 11px; font-weight: 900; text-transform: uppercase; letter-spacing: .5px; color: var(--accent); margin-bottom: 6px; }
+  .question-block .q-text { font-size: 15px; font-weight: 700; margin: 0 0 10px; line-height: 1.55; }
+  .question-block .q-quote { background: var(--light-yellow); border-radius: 10px; padding: 10px 12px; font-style: italic; font-size: 14px; color: var(--text-soft); margin-top: 8px; }
+  .writing-area { margin-top: 12px; }
+  .writing-area textarea { width: 100%; padding: 13px 15px; border-radius: 11px; border: 1px solid var(--border-strong); background: var(--card-soft); color: var(--text); font-size: 14px; font-family: inherit; resize: vertical; min-height: 120px; line-height: 1.6; transition: all .2s; }
+  .writing-area textarea:focus { outline: none; border-color: var(--accent); box-shadow: 0 0 0 3px var(--light-yellow); }
+  .topics-grid { display: grid; grid-template-columns: repeat(auto-fit,minmax(260px,1fr)); gap: 12px; margin: 12px 0; }
+  .topic-card { background: var(--card-soft); border: 2px solid var(--border); border-radius: 14px; padding: 14px; cursor: pointer; transition: all .2s; }
+  .topic-card:hover { border-color: var(--border-strong); transform: translateY(-2px); }
+  .topic-card.selected { border-color: var(--accent); background: var(--light-yellow); }
+  .topic-card h4 { margin: 0 0 8px; font-size: 15px; color: var(--accent); }
+  .topic-card ul { margin: 8px 0 0; padding-left: 18px; font-size: 13px; color: var(--text-soft); }
+  .topic-card ul li { margin: 4px 0; }
+  .criteria-block { background: var(--card-soft); border: 1px solid var(--border); border-radius: 14px; padding: 14px 16px; margin-top: 14px; }
+  .criteria-block h4 { margin: 0 0 10px; font-size: 15px; color: var(--accent); }
+  .criteria-row { display: flex; align-items: flex-start; gap: 10px; padding: 8px 0; border-top: 1px dashed var(--border); }
+  .criteria-row:first-of-type { border-top: 0; }
+  .criteria-row .crit-label { flex: 1; font-size: 13px; color: var(--text-soft); line-height: 1.5; }
+  .criteria-row .crit-label strong { color: var(--text); display: block; margin-bottom: 3px; font-size: 13px; }
+  .criteria-row .crit-options { display: flex; gap: 6px; flex-shrink: 0; }
+  .criteria-row .crit-options label { display: inline-flex; align-items: center; gap: 3px; background: var(--card); border: 1px solid var(--border); border-radius: 8px; padding: 4px 8px; cursor: pointer; font-size: 12px; font-weight: 800; transition: all .15s; }
+  .criteria-row .crit-options label:hover { border-color: var(--border-strong); }
+  .criteria-row .crit-options input[type="radio"] { accent-color: var(--accent); cursor: pointer; }
+  .criteria-row .crit-options input[type="radio"]:checked + span { color: var(--accent); }
+  .summary { background: var(--light-yellow); border: 1px solid var(--border-strong); border-radius: 22px; padding: 22px; text-align: center; margin-top: 22px; animation: slideIn .3s; }
+  .summary .score { font-size: 44px; font-weight: 950; color: var(--accent); font-variant-numeric: tabular-nums; }
+  .summary.passed { background: var(--green-light); border-color: var(--green); }
+  .summary.passed .score { color: var(--green); }
+  .summary.failed { background: var(--red-light); border-color: var(--red); }
+  .summary.failed .score { color: var(--red); }
+  .reset-bar { display: flex; gap: 10px; flex-wrap: wrap; margin-bottom: 16px; justify-content: flex-end; }
+  .support-card { background: var(--card); border: 1px solid var(--border-strong); border-radius: 22px; padding: 22px; box-shadow: var(--shadow); text-align: center; }
+  .support-card h2 { margin-bottom: 8px; }
+  .support-card p { margin: 8px 0; color: var(--text-soft); }
+  .phone { color: var(--accent); font-weight: 900; text-decoration: none; border-bottom: 1px dashed var(--accent); }
+  .copy-status { margin-left: 6px; color: var(--accent); font-weight: 850; }
+  footer { padding: 26px 0 44px; color: var(--muted); text-align: center; border-top: 1px solid var(--border); margin-top: 26px; font-size: 13px; }
+  .reference-table { width: 100%; border-collapse: collapse; margin-top: 8px; font-size: 12px; }
+  .reference-table th, .reference-table td { border: 1px solid var(--border); padding: 6px; text-align: left; }
+  .reference-table th { background: var(--light-yellow); color: var(--accent); }
+  @media (max-width: 860px) {
+    .hero { grid-template-columns: 1fr; } .metrics { grid-template-columns: 1fr; }
+    nav { gap: 10px; font-size: 12px; }
+    .top-controls { width: 100%; justify-content: space-between; }
+    .selector-bar { position: static; }
+  }
+  @media print {
+    header, nav, .top-controls, .actions, .reset-bar, .selector-bar, footer, .support-card, .btn, .icon-btn, .task-timer { display: none !important; }
+    body { background: #fff; color: #000; }
+    .container { width: 100%; }
+    .task-block, .card, .panel { break-inside: avoid; border: 1px solid #ccc; box-shadow: none; }
+  }
+</style>
+</head>
+<body>
+<header>
+  <div class="container topbar">
+    <div class="brand">
+      <img src="favicon.ico" class="brand-logo" alt="Anti-AI Qwen Academy" onerror="this.style.display='none'" />
+      <div>
+        <strong data-i18n="brandTitle">Итоговое собеседование 2027</strong>
+        <small data-i18n="brandSub">Русский язык • 9 класс • Допуск к ОГЭ</small>
+      </div>
+    </div>
+    <nav>
+      <a href="#structure" data-i18n="navStructure">Структура</a>
+      <a href="#trainer" data-i18n="navTrainer">Тренажёр</a>
+      <a href="#references" data-i18n="navRefs">Критерии</a>
+      <a href="#support" data-i18n="navSupport">Поддержать</a>
+    </nav>
+    <div class="top-controls">
+      <button id="themeToggle" class="icon-btn" type="button" aria-label="Theme"><span id="themeIcon">🌙</span></button>
+      <button id="langToggle" class="icon-btn" type="button" aria-label="Language">
+        <span class="lang-option active" data-lang="ru">RU</span><span>/</span><span class="lang-option" data-lang="en">EN</span>
+      </button>
+      <button class="icon-btn" type="button" title="Печать" onclick="window.print()">🖨</button>
+      <button class="icon-btn" type="button" title="Экспорт" onclick="exportResults()">💾</button>
+    </div>
+  </div>
+</header>
+
+<div class="selector-bar">
+  <div class="container selector-row">
+    <span class="selector-label" data-i18n="variantLabel">Вариант:</span>
+    <div id="variantButtons" style="display:flex;gap:6px;flex-wrap:wrap;"></div>
+    <div class="reset-bar" style="margin-left:auto;margin-bottom:0;">
+      <button class="btn secondary small" onclick="resetVariant()" data-i18n="resetVariant">Сбросить ответы</button>
+    </div>
+  </div>
+</div>
+
+<main class="container">
+  <section class="hero">
+    <div>
+      <span class="badge" data-i18n="badge">3 задания • 17 баллов • порог 10</span>
+      <h1 data-i18n="h1">Тренажёр <span class="accent">итогового собеседования</span> по русскому языку 2027</h1>
+      <p class="lead" data-i18n="lead">Полное соответствие спецификации ФИПИ 2027. Допуск к ОГЭ, 9 класс. Задание 1 — чтение вслух (3 б.), задание 2 — беседа по тексту (5 б.), задание 3 — монолог (3 б.), грамотность речи (6 б.). Порог «зачёта» — 10 из 17.</p>
+      <div class="actions">
+        <button class="btn" onclick="scrollToId('trainer')" data-i18n="actionTrainer">Начать тренировку</button>
+        <button class="btn secondary" onclick="scrollToId('references')" data-i18n="actionRefs">Критерии ФИПИ</button>
+      </div>
+    </div>
+    <aside class="panel">
+      <h3 data-i18n="quickStats">Твой прогресс</h3>
+      <div class="metrics">
+        <div class="metric"><strong id="scoreDisplay">0/17</strong><span data-i18n="metricScore">первичных баллов</span></div>
+        <div class="metric green"><strong id="verdictDisplay">—</strong><span data-i18n="metricVerdict">вердикт</span></div>
+        <div class="metric blue"><strong id="progressDisplay">0%</strong><span data-i18n="metricProgress">заполнено</span></div>
+      </div>
+      <progress id="overall" value="0" max="100"></progress>
+      <p class="note" data-i18n="noteReset">Прогресс не сохраняется между сессиями.</p>
+    </aside>
+  </section>
+
+  <section id="structure">
+    <div class="section-head"><div><h2 data-i18n="structureTitle">Структура КИМ 2027</h2><p class="sub" data-i18n="structureSub">3 задания базового уровня сложности. Максимум — 17 баллов.</p></div></div>
+    <div class="grid" id="structureGrid"></div>
+  </section>
+
+  <section id="trainer">
+    <div class="section-head">
+      <div>
+        <h2 data-i18n="trainerTitle">Тренажёр</h2>
+        <p class="sub" id="trainerSub"></p>
+      </div>
+    </div>
+    <div id="trainerContent"></div>
+    <div id="summaryBox"></div>
+  </section>
+
+  <section id="references">
+    <div class="section-head"><div><h2 data-i18n="refsTitle">Критерии оценивания ФИПИ 2027</h2><p class="sub" data-i18n="refsSub">Шкала перевода + критерии по заданиям.</p></div></div>
+    <div class="grid" id="refsGrid"></div>
+    <div class="card" style="margin-top:14px;">
+      <h3 data-i18n="refRules">Что важно помнить на собеседовании</h3>
+      <ul class="mini-list" id="refRulesList"></ul>
+    </div>
+  </section>
+
+  <section id="support">
+    <div class="support-card">
+      <h2 data-i18n="supportTitle">🤝 ПОДДЕРЖАТЬ ПРОЕКТ ❤️</h2>
+      <p data-i18n="supportP1"><strong>Приложение бесплатное. Было и останется.</strong></p>
+      <p data-i18n="supportP2">Все приложения бесплатны и без рекламы.</p>
+      <p>
+        <span data-i18n="supportPhoneLabel">📱 ПЕРЕВОД ПО НОМЕРУ:</span>
+        <a class="phone" href="tel:89202275676">8-920-227-56-76</a>
+        <button class="btn small" onclick="copyPhone()" data-i18n="copyPhone">📋 Копировать</button>
+        <span id="copyStatus" class="copy-status" aria-live="polite"></span>
+      </p>
+      <p data-i18n="supportP3">✅ Мгновенно. Без комиссии. Безопасно.</p>
+      <p data-i18n="supportP4">❤️ Спасибо за поддержку!</p>
+      <p>🌟 👉 <a href="https://ancf-hue.github.io/" target="_blank" rel="noopener noreferrer" style="color:var(--accent);font-weight:800;text-decoration:none;" data-i18n="supportCatalog">Каталог офлайн-приложений Anti-AI Shield</a></p>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="container" data-i18n="footer">Итоговое собеседование 2027 • Русский язык • 9 класс • Допуск к ОГЭ</div>
+</footer>
+
+<script>
+/* ============================================================
+   STATE
+============================================================ */
+let currentLang = "ru";
+let currentTheme = "dark";
+let currentVariant = "A";
+let answers = {};      // { variantKey: { taskId: { ... } } }
+let activeTimers = {}; // { timerId: { remaining, interval, running } }
+
+function stateKey(variant, taskId) { return `${variant}_${taskId}`; }
+function getAnswer(taskId) { return answers[stateKey(currentVariant, taskId)] || {}; }
+function setAnswer(taskId, key, val) {
+  const k = stateKey(currentVariant, taskId);
+  if (!answers[k]) answers[k] = {};
+  answers[k][key] = val;
+}
+function escapeHtml(str) {
+  return String(str == null ? "" : str).replace(/[&<>"']/g, m => ({ "&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;" }[m]));
+}
+function scrollToId(id) { const el = document.getElementById(id); if (el) el.scrollIntoView({ behavior: "smooth", block: "start" }); }
+function loc(obj) { return obj && obj[currentLang] !== undefined ? obj[currentLang] : (obj && obj.ru !== undefined ? obj.ru : ""); }
+
+/* ============================================================
+   КРИТЕРИИ И КОНФИГ
+============================================================ */
+const VARIANTS = ["A", "B", "C", "D"];
+const MAX_SCORE = 17;
+const PASS_SCORE = 10;
+
+/* ============================================================
+   I18N
+============================================================ */
+const I18N = {
+  ru: {
+    docTitle: "Итоговое собеседование 2027 | Русский язык • 9 класс",
+    brandTitle: "Итоговое собеседование 2027",
+    brandSub: "Русский язык • 9 класс • Допуск к ОГЭ",
+    navStructure: "Структура", navTrainer: "Тренажёр", navRefs: "Критерии", navSupport: "Поддержать",
+    badge: "3 задания • 17 баллов • порог 10",
+    h1: 'Тренажёр <span class="accent">итогового собеседования</span> по русскому языку 2027',
+    lead: "Полное соответствие спецификации ФИПИ 2027. Допуск к ОГЭ, 9 класс. Задание 1 — чтение вслух (3 б.), задание 2 — беседа по тексту (5 б.), задание 3 — монолог (3 б.), грамотность речи (6 б.). Порог «зачёта» — 10 из 17.",
+    actionTrainer: "Начать тренировку", actionRefs: "Критерии ФИПИ",
+    quickStats: "Твой прогресс", metricScore: "первичных баллов", metricVerdict: "вердикт", metricProgress: "заполнено",
+    noteReset: "Прогресс не сохраняется между сессиями.",
+    variantLabel: "Вариант:",
+    resetVariant: "Сбросить ответы",
+    structureTitle: "Структура КИМ 2027", structureSub: "3 задания базового уровня сложности. Максимум — 17 баллов.",
+    trainerTitle: "Тренажёр",
+    refsTitle: "Критерии оценивания ФИПИ 2027", refsSub: "Шкала перевода + критерии по заданиям.",
+    refRules: "Что важно помнить на собеседовании",
+    supportTitle: "🤝 ПОДДЕРЖАТЬ ПРОЕКТ ❤️",
+    supportP1: "<strong>Приложение бесплатное. Было и останется.</strong>",
+    supportP2: "Все приложения бесплатны и без рекламы.",
+    supportPhoneLabel: "📱 ПЕРЕВОД ПО НОМЕРУ:", copyPhone: "📋 Копировать", copied: "✓ Скопировано",
+    supportP3: "✅ Мгновенно. Без комиссии. Безопасно.", supportP4: "❤️ Спасибо за поддержку!",
+    supportCatalog: "Каталог офлайн-приложений Anti-AI Shield",
+    footer: "Итоговое собеседование 2027 • Русский язык • 9 класс • Допуск к ОГЭ",
+    task1Title: "Задание 1. Чтение текста вслух",
+    task1Sub: "Выразительно прочитайте текст. Подготовка — 5 минут (вместе с заданием 2).",
+    task1Timer: "Подготовка (5 мин)",
+    task2Title: "Задание 2. Беседа по тексту",
+    task2Sub: "Ответьте на 5 вопросов по тексту. Вопрос 5 — с цитатой.",
+    task3Title: "Задание 3. Монологическое высказывание",
+    task3Sub: "Выберите одну из трёх тем. Подготовка — 2 минуты, ответ — до 3 минут, не менее 10 фраз.",
+    task3Timer: "Подготовка (2 мин)",
+    task3AnswerTimer: "Ответ (3 мин)",
+    task4Title: "Грамотность речи (сквозная оценка)",
+    task4Sub: "Оцените речь по итогам всех заданий: орфоэпия, грамматика, речевые нормы.",
+    textMeta: "слов",
+    textReadLabel: "Отметьте, когда прочитали текст вслух:",
+    textReadCheckbox: "✓ Я прочитал(а) текст вслух",
+    notesLabel: "Поле для заметок (не оценивается):",
+    notesPlaceholder: "Запишите ключевые мысли, план ответа...",
+    answerLabel: "Ваш ответ (запишите устно произнесённое):",
+    answerPlaceholder: "Запишите то, что вы произнесли бы вслух...",
+    topicsLabel: "Выберите тему монолога:",
+    topic1: "Тема 1. Профессиональный выбор",
+    topic1Type: "(на основе описания фотографии)",
+    topic2: "Тема 2. Памятник, который запомнился",
+    topic2Type: "(повествование на основе жизненного опыта)",
+    topic3: "Тема 3. Что значит быть гражданином?",
+    topic3Type: "(рассуждение по поставленному вопросу)",
+    selfCheckTitle: "Самооценка по критериям:",
+    criteriaTask1: "Задание 1. Критерии (макс. 3 балла)",
+    criteriaTask2: "Задание 2. Критерии (макс. 5 баллов)",
+    criteriaTask3: "Задание 3. Критерии (макс. 3 балла)",
+    criteriaTask4: "Грамотность речи (макс. 6 баллов)",
+    pointsLabel: "б.",
+    summaryTitle: "Итог",
+    summaryPassed: "✅ ЗАЧЁТ!",
+    summaryFailed: "❌ НЕ ЗАЧЁТ",
+    summaryHintPassed: "Вы набрали 10 или более баллов — это зачёт.",
+    summaryHintFailed: "Нужно не менее 10 из 17 баллов.",
+    summaryFilled: "Заполнено критериев",
+    summaryOf: "из",
+    summaryScoreByBlock: "Баллы по блокам:",
+    blockReading: "Чтение",
+    blockDialog: "Беседа",
+    blockMonolog: "Монолог",
+    blockSpeech: "Грамотность",
+    exportDone: "✓ Файл сохранён",
+    resetConfirm: "Сбросить все ответы?",
+    copyFail: "Не удалось скопировать. Номер: ",
+    timerStart: "▶", timerPause: "⏸", timerReset: "↺",
+    timerUp: "Время вышло!",
+    textOfText: "Текст задания",
+    questionsTitle: "Вопросы собеседника",
+    questionLabel: "Вопрос",
+    citationLabel: "Цитата",
+    topicsChooseHint: "Нажмите на карточку, чтобы выбрать тему",
+    taskBlocks: [
+      { ru: "Задание 1. Чтение вслух", en: "Task 1. Reading aloud", max: 3 },
+      { ru: "Задание 2. Беседа по тексту", en: "Task 2. Conversation", max: 5 },
+      { ru: "Задание 3. Монолог", en: "Task 3. Monologue", max: 3 },
+      { ru: "Грамотность речи", en: "Speech accuracy", max: 6 }
+    ],
+    criteria: {
+      "Ч1": { ru: "Интонация соответствует пунктуационному оформлению текста", en: "Intonation matches punctuation", max: 1 },
+      "Ч2": { ru: "Темп чтения соответствует коммуникативной задаче", en: "Reading pace matches the task", max: 1 },
+      "Ч3": { ru: "Искажения слов отсутствуют", en: "No word distortions", max: 1 },
+      "Д1": { ru: "Ответ на 1-й вопрос: развёрнутый, правильный, полный", en: "Answer to Q1: detailed, correct, complete", max: 1 },
+      "Д2": { ru: "Ответ на 2-й вопрос: развёрнутый, правильный, полный", en: "Answer to Q2: detailed, correct, complete", max: 1 },
+      "Д3": { ru: "Ответ на 3-й вопрос: развёрнутый, правильный, полный", en: "Answer to Q3: detailed, correct, complete", max: 1 },
+      "Д4": { ru: "Ответ на 4-й вопрос: развёрнутый, правильный, полный", en: "Answer to Q4: detailed, correct, complete", max: 1 },
+      "Д5": { ru: "Ответ на 5-й вопрос (с цитатой): развёрнутый, правильный, полный", en: "Answer to Q5 (with quote): detailed, correct, complete", max: 1 },
+      "М1": { ru: "Коммуникативная задача: ≥10 фраз без фактических ошибок (2 б.), 5–9 фраз (1 б.), <5 (0 б.)", en: "Communicative task: ≥10 phrases (2), 5–9 (1), <5 (0)", max: 2 },
+      "М2": { ru: "Логичность монологического высказывания", en: "Logical coherence of the monologue", max: 1 },
+      "Р1": { ru: "ОРФОЭПИЯ: правильные ударения и произношение слов (2 б. — нет ошибок, 1 б. — 1–2 ошибки, 0 б. — 3+)", en: "Orthoepic norms (stress & pronunciation)", max: 2 },
+      "Р2": { ru: "ГРАММАТИКА: правильное построение словосочетаний и предложений (2 б. — нет ошибок, 1 б. — 1–2, 0 б. — 3+)", en: "Grammar norms (syntax & morphology)", max: 2 },
+      "Р3": { ru: "РЕЧЕВЫЕ НОРМЫ: отсутствие плеоназмов, тавтологий, неправильного употребления слов (2 б. — 0-2 ош., 1 б. — 3-4 ош., 0 б. — 5+)", en: "Speech norms (vocabulary usage)", max: 2 }
+    },
+    refRulesList: [
+      "Задание 1: читайте выразительно, соблюдая знаки препинания.",
+      "Задание 2: отвечайте развёрнуто, полно, без фактических ошибок.",
+      "Вопрос 5 всегда содержит цитату — её нужно прокомментировать с опорой на текст.",
+      "Задание 3: минимум 10 предложений, монолог не более 3 минут.",
+      "Грамотность речи оценивается сквозным методом по всем заданиям.",
+      "Порог «зачёта» — 10 из 17 первичных баллов.",
+      "Максимальное время собеседования — 15–16 минут."
+    ],
+    refScaleTitle: "Шкала перевода",
+    refScaleColPoints: "Баллы", refScaleColResult: "Результат",
+    refScalePass: "10–17", refScaleFail: "0–9",
+    refScalePassLabel: "✅ ЗАЧЁТ", refScaleFailLabel: "❌ НЕ ЗАЧЁТ",
+    refScaleNote: "Зачёт — при 10 и более баллах. Отдельных порогов по заданиям нет, но все задания должны быть выполнены."
+  },
+  en: {
+    docTitle: "Final Interview 2027 | Russian • Grade 9",
+    brandTitle: "Final Interview 2027",
+    brandSub: "Russian • Grade 9 • OGE admission",
+    navStructure: "Structure", navTrainer: "Trainer", navRefs: "Criteria", navSupport: "Support",
+    badge: "3 tasks • 17 points • threshold 10",
+    h1: 'Trainer for the <span class="accent">Final Interview</span> in Russian 2027',
+    lead: "Full compliance with FIPI 2027 specification. Grade 9, OGE admission. Task 1 — reading aloud (3), task 2 — conversation (5), task 3 — monologue (3), speech accuracy (6). Pass threshold — 10 of 17.",
+    actionTrainer: "Start training", actionRefs: "FIPI criteria",
+    quickStats: "Your progress", metricScore: "primary points", metricVerdict: "verdict", metricProgress: "filled",
+    noteReset: "Progress is not saved between sessions.",
+    variantLabel: "Variant:",
+    resetVariant: "Reset answers",
+    structureTitle: "KIM 2027 structure", structureSub: "3 basic-level tasks. Max — 17 points.",
+    trainerTitle: "Trainer",
+    refsTitle: "FIPI 2027 assessment criteria", refsSub: "Conversion scale + criteria per task.",
+    refRules: "What to remember at the interview",
+    supportTitle: "🤝 SUPPORT ❤️",
+    supportP1: "<strong>The app is free.</strong>",
+    supportP2: "All apps are free and ad-free.",
+    supportPhoneLabel: "📱 PHONE:", copyPhone: "📋 Copy", copied: "✓ Copied",
+    supportP3: "✅ Instant.", supportP4: "❤️ Thanks!",
+    supportCatalog: "Anti-AI Shield apps",
+    footer: "Final Interview 2027 • Russian • Grade 9 • OGE admission",
+    task1Title: "Task 1. Reading the text aloud",
+    task1Sub: "Read the text aloud expressively. Preparation — 5 min (with task 2).",
+    task1Timer: "Preparation (5 min)",
+    task2Title: "Task 2. Conversation about the text",
+    task2Sub: "Answer 5 questions on the text. Question 5 contains a quotation.",
+    task3Title: "Task 3. Monologue",
+    task3Sub: "Choose one of three topics. Preparation — 2 min, answer — up to 3 min, at least 10 phrases.",
+    task3Timer: "Preparation (2 min)",
+    task3AnswerTimer: "Answer (3 min)",
+    task4Title: "Speech accuracy (across the tasks)",
+    task4Sub: "Assess your speech: orthoepy, grammar, speech norms.",
+    textMeta: "words",
+    textReadLabel: "Mark when you finish reading aloud:",
+    textReadCheckbox: "✓ I have read the text aloud",
+    notesLabel: "Notes field (not assessed):",
+    notesPlaceholder: "Write key ideas, plan...",
+    answerLabel: "Your answer (write what you would say aloud):",
+    answerPlaceholder: "Write what you would say aloud...",
+    topicsLabel: "Choose a monologue topic:",
+    topic1: "Topic 1. Professional choice",
+    topic1Type: "(based on a photograph)",
+    topic2: "Topic 2. A monument I remember",
+    topic2Type: "(narration based on life experience)",
+    topic3: "Topic 3. What does it mean to be a citizen?",
+    topic3Type: "(reasoning on the question)",
+    selfCheckTitle: "Self-assessment by criteria:",
+    criteriaTask1: "Task 1. Criteria (max 3 points)",
+    criteriaTask2: "Task 2. Criteria (max 5 points)",
+    criteriaTask3: "Task 3. Criteria (max 3 points)",
+    criteriaTask4: "Speech accuracy (max 6 points)",
+    pointsLabel: "pts",
+    summaryTitle: "Result",
+    summaryPassed: "✅ PASSED!",
+    summaryFailed: "❌ NOT PASSED",
+    summaryHintPassed: "You scored 10 or more points — you passed.",
+    summaryHintFailed: "Need at least 10 of 17 points.",
+    summaryFilled: "Criteria filled",
+    summaryOf: "of",
+    summaryScoreByBlock: "Scores by block:",
+    blockReading: "Reading",
+    blockDialog: "Conversation",
+    blockMonolog: "Monologue",
+    blockSpeech: "Accuracy",
+    exportDone: "✓ File saved",
+    resetConfirm: "Reset all answers?",
+    copyFail: "Copy failed: ",
+    timerStart: "▶", timerPause: "⏸", timerReset: "↺",
+    timerUp: "Time is up!",
+    textOfText: "Text of the task",
+    questionsTitle: "Interviewer's questions",
+    questionLabel: "Question",
+    citationLabel: "Quote",
+    topicsChooseHint: "Click a card to select the topic",
+    taskBlocks: [
+      { ru: "Задание 1. Чтение вслух", en: "Task 1. Reading aloud", max: 3 },
+      { ru: "Задание 2. Беседа по тексту", en: "Task 2. Conversation", max: 5 },
+      { ru: "Задание 3. Монолог", en: "Task 3. Monologue", max: 3 },
+      { ru: "Грамотность речи", en: "Speech accuracy", max: 6 }
+    ],
+    criteria: {
+      "Ч1": { ru: "Интонация", en: "Intonation", max: 1 },
+      "Ч2": { ru: "Темп чтения", en: "Reading pace", max: 1 },
+      "Ч3": { ru: "Нет искажений слов", en: "No word distortions", max: 1 },
+      "Д1": { ru: "Ответ на 1-й вопрос: развёрнутый, правильный, полный", en: "Answer to Q1: detailed, correct, complete", max: 1 },
+      "Д2": { ru: "Ответ на 2-й вопрос", en: "Answer to Q2", max: 1 },
+      "Д3": { ru: "Ответ на 3-й вопрос", en: "Answer to Q3", max: 1 },
+      "Д4": { ru: "Ответ на 4-й вопрос", en: "Answer to Q4", max: 1 },
+      "Д5": { ru: "Ответ на 5-й вопрос (с цитатой)", en: "Answer to Q5 (with quote)", max: 1 },
+      "М1": { ru: "Коммуникативная задача (≥10 фраз)", en: "Communicative task (≥10 phrases)", max: 2 },
+      "М2": { ru: "Логичность высказывания", en: "Logical coherence", max: 1 },
+      "Р1": { ru: "ОРФОЭПИЯ: правильные ударения и произношение (2 б. — 0, 1 б. — 1-2, 0 б. — 3+)", en: "Orthoepic norms (stress & pronunciation)", max: 2 },
+      "Р2": { ru: "ГРАММАТИКА: построение слов и предложений (2 б. — 0, 1 б. — 1-2, 0 б. — 3+)", en: "Grammar norms (syntax & morphology)", max: 2 },
+      "Р3": { ru: "РЕЧЕВЫЕ НОРМЫ: отсутствие тавтологий и ошибок в словах (2 б. — 0-2, 1 б. — 3-4, 0 б. — 5+)", en: "Speech norms (vocabulary usage)", max: 2 }
+    },
+    refRulesList: [
+      "Task 1: read expressively, following punctuation.",
+      "Task 2: answer in detail, fully, without factual errors.",
+      "Question 5 always contains a quote — comment on it, referring to the text.",
+      "Task 3: at least 10 sentences, monologue up to 3 minutes.",
+      "Speech accuracy is assessed across all tasks.",
+      "Pass threshold — 10 of 17 primary points.",
+      "Maximum interview time — 15–16 minutes."
+    ],
+    refScaleTitle: "Conversion scale",
+    refScaleColPoints: "Points", refScaleColResult: "Result",
+    refScalePass: "10–17", refScaleFail: "0–9",
+    refScalePassLabel: "✅ PASSED", refScaleFailLabel: "❌ NOT PASSED",
+    refScaleNote: "Pass at 10 or more points. No separate per-task thresholds, but all tasks must be completed."
+  }
+};
+
+/* ============================================================
+   СТРУКТУРНЫЕ КАРТОЧКИ
+============================================================ */
+const structureCards = [
+  { cardClass: "info-card", tagClass: "blue", tag: { ru: "Задание 1", en: "Task 1" },
+    title: { ru: "Чтение текста вслух", en: "Reading the text aloud" },
+    items: [
+      { ru: "Максимум — 3 балла.", en: "Max — 3 points." },
+      { ru: "Ч1 — интонация (1 балл).", en: "Ч1 — intonation (1 point)." },
+      { ru: "Ч2 — темп чтения (1 балл).", en: "Ч2 — pace (1 point)." },
+      { ru: "Ч3 — искажения слов (1 балл).", en: "Ч3 — word distortions (1 point)." }
+    ] },
+  { cardClass: "success-card", tagClass: "green", tag: { ru: "Задание 2", en: "Task 2" },
+    title: { ru: "Беседа по тексту", en: "Conversation about the text" },
+    items: [
+      { ru: "Максимум — 5 баллов.", en: "Max — 5 points." },
+      { ru: "5 вопросов по тексту.", en: "5 questions on the text." },
+      { ru: "Вопрос 5 — с цитатой.", en: "Question 5 — with a quote." },
+      { ru: "По 1 баллу за каждый ответ.", en: "1 point per answer." }
+    ] },
+  { cardClass: "warn-card", tagClass: "orange", tag: { ru: "Задание 3", en: "Task 3" },
+    title: { ru: "Монологическое высказывание", en: "Monologue" },
+    items: [
+      { ru: "Максимум — 3 балла.", en: "Max — 3 points." },
+      { ru: "М1 — коммуникативная задача (2 б.).", en: "М1 — communicative task (2 pts)." },
+      { ru: "М2 — логичность (1 б.).", en: "М2 — coherence (1 pt)." },
+      { ru: "Не менее 10 предложений.", en: "At least 10 sentences." }
+    ] },
+  { cardClass: "danger-card", tagClass: "red", tag: { ru: "Грамотность речи", en: "Speech accuracy" },
+    title: { ru: "Сквозная оценка по 1–3", en: "Assessed across tasks 1–3" },
+    items: [
+      { ru: "Максимум — 6 баллов.", en: "Max — 6 points." },
+      { ru: "Р1 — орфоэпия (2 б.).", en: "Р1 — orthoepy (2 pts)." },
+      { ru: "Р2 — грамматика (2 б.).", en: "Р2 — grammar (2 pts)." },
+      { ru: "Р3 — речевые нормы (2 б.).", en: "Р3 — speech norms (2 pts)." }
+    ] }
+];
+
+function renderStructureCards() {
+  document.getElementById("structureGrid").innerHTML = structureCards.map(card => {
+    const body = card.items ? `<ul class="mini-list">${card.items.map(it => `<li>${escapeHtml(loc(it))}</li>`).join("")}</ul>` : "";
+    return `<article class="card ${card.cardClass}"><span class="tag ${card.tagClass}">${escapeHtml(loc(card.tag))}</span><h3>${escapeHtml(loc(card.title))}</h3>${body}</article>`;
+  }).join("");
+}
+
+/* ============================================================
+   БАНК ЗАДАНИЙ
+============================================================ */
+const variantsDB = {};
+
+/* ============================================================
+   ВАРИАНТ A — Валерий Гергиев (дирижёр)
+============================================================ */
+variantsDB["A"] = {
+  text: {
+    title: { ru: "Валерий Абисалович Гергиев — дирижёр (185 слов)", en: "Valery Gergiev — conductor (185 words)" },
+    words: 185,
+    body: { ru: `Валерий Абисалович Гергиев — известный российский дирижёр. Он вырос в Северной Осетии, с детства увлекался музыкой, обладал уникальным слухом. Ещё будучи студентом консерватории, одарённый музыкант становился победителем престижных конкурсов дирижёров.
+
+Талант этого музыканта восхищает публику. Его дирижёрское искусство характеризуется эмоциональностью и яркой индивидуальностью.
+
+Валерий Гергиев работал с разными симфоническими оркестрами. Более 30 лет он служит бессменным художественным руководителем Мариинского театра в Санкт-Петербурге. Труппа даёт в год более 700 спектаклей, гастролирует по всему миру. Благодаря Гергиеву репертуар театра расширяется, на сцене появляются молодые талантливые исполнители, звучит музыка современных композиторов. Музыкант является учредителем благотворительного фонда, который помогает развитию театра. Валерий Гергиев возглавляет жюри многих музыкальных конкурсов и фестивалей. Заслуги дирижёра отмечены многочисленными наградами.
+
+Валерий Гергиев уверен, что музыка должна объединять людей, пробуждать в них доброту и отзывчивость, готовность помогать друг другу. В 2008 году он выступил с концертом в память о жертвах среди мирного населения в Цхинвале, в 2016 году — в Сирии. Валерий Гергиев дирижировал оркестром на церемониях открытия и закрытия зимней Олимпиады в Сочи в 2014 году. В декабре 2023 года дирижёр был назначен генеральным директором Большого театра в Москве. Искусство Валерия Гергиева востребовано во всём мире.`,
+      en: `Valery Abisalovich Gergiev is a famous Russian conductor. He grew up in North Ossetia, was fond of music from childhood, and had a unique ear for music. While still a student at the conservatory, the gifted musician won prestigious conducting competitions.
+
+The talent of this musician delights the public. His conducting art is characterised by emotionality and bright individuality.
+
+Valery Gergiev has worked with various symphony orchestras. For more than 30 years he has served as the permanent artistic director of the Mariinsky Theatre in St Petersburg. The company gives more than 700 performances a year and tours all over the world. Thanks to Gergiev, the theatre's repertoire is expanding, young talented performers appear on stage, and music by contemporary composers is heard. The musician is the founder of a charity fund that helps the theatre develop. Valery Gergiev chairs the jury of many music competitions and festivals. The conductor's merits have been marked by numerous awards.
+
+Valery Gergiev is sure that music should unite people, awaken kindness and responsiveness in them, and readiness to help each other. In 2008 he gave a concert in memory of civilian victims in Tskhinval, in 2016 — in Syria. Valery Gergiev conducted the orchestra at the opening and closing ceremonies of the Winter Olympics in Sochi in 2014. In December 2023 the conductor was appointed general director of the Bolshoi Theatre in Moscow. The art of Valery Gergiev is in demand all over the world.` }
+  },
+  questions: [
+    { text: { ru: "Где вырос Валерий Абисалович Гергиев?", en: "Where did Valery Gergiev grow up?" } },
+    { text: { ru: "Какими чертами характеризуется дирижёрское искусство Гергиева?", en: "What traits characterise Gergiev's conducting art?" } },
+    { text: { ru: "Как изменился репертуар Мариинского театра под руководством Валерия Абисаловича?", en: "How did the Mariinsky Theatre's repertoire change under his leadership?" } },
+    { text: { ru: "В каких торжественных мероприятиях Валерий Абисалович Гергиев выступал как дирижёр?", en: "At which ceremonial events did Gergiev perform as a conductor?" } },
+    { text: { ru: "Какой вклад Валерия Абисаловича Гергиева в культуру отражён в словах оперного певца Дмитрия Хворостовского? Обоснуйте Ваш ответ, приведя пример из текста.", en: "What contribution of Gergiev to culture is reflected in the words of opera singer Dmitri Hvorostovsky? Justify your answer with an example from the text." },
+      quote: { ru: "Гергиев — это наша гордость, наше достоинство. Я считаю, он настоящий герой.", en: "\"Gergiev is our pride, our dignity. I consider him a true hero.\"" } }
+  ],
+  topics: [
+    { title: { ru: "Тема 1. Профессиональный выбор", en: "Topic 1. Professional choice" },
+      type: { ru: "(на основе описания фотографии)", en: "(based on a photograph)" },
+      questions: [
+        { ru: "Представитель какой профессии запечатлён на фотографии?", en: "What profession is shown in the photo?" },
+        { ru: "Каков внешний вид человека?", en: "What is the person's appearance?" },
+        { ru: "Где он сфотографирован?", en: "Where was the photo taken?" },
+        { ru: "В чём заключается важность для общества его профессии?", en: "Why is this profession important for society?" }
+      ] },
+    { title: { ru: "Тема 2. Памятник, который запомнился", en: "Topic 2. A monument I remember" },
+      type: { ru: "(повествование на основе жизненного опыта)", en: "(narration based on life experience)" },
+      questions: [
+        { ru: "Что это за памятник, где он расположен?", en: "What monument is it, where is it located?" },
+        { ru: "Как выглядит этот памятник?", en: "What does the monument look like?" },
+        { ru: "При каких обстоятельствах Вы его увидели впервые?", en: "Under what circumstances did you first see it?" },
+        { ru: "Почему он запомнился?", en: "Why did it stay in your memory?" }
+      ] },
+    { title: { ru: "Тема 3. Что значит быть гражданином?", en: "Topic 3. What does it mean to be a citizen?" },
+      type: { ru: "(рассуждение по поставленному вопросу)", en: "(reasoning on the question)" },
+      questions: [
+        { ru: "Что значит Родина для человека?", en: "What does the Motherland mean to a person?" },
+        { ru: "Почему нужно бережно относиться к культурному наследию предков?", en: "Why should we take care of the cultural heritage of our ancestors?" },
+        { ru: "Почему важно знать историю своей страны?", en: "Why is it important to know the history of your country?" },
+        { ru: "Как нужно относиться к родной природе?", en: "How should we treat our native nature?" }
+      ] }
+  ]
+};
+
+/* ============================================================
+   ВАРИАНТ B — Юрий Гагарин (космонавт)
+============================================================ */
+variantsDB["B"] = {
+  text: {
+    title: { ru: "Юрий Алексеевич Гагарин — первый космонавт (165 слов)", en: "Yuri Gagarin — the first cosmonaut (165 words)" },
+    words: 165,
+    body: { ru: `Юрий Алексеевич Гагарин — первый человек, совершивший полёт в космос. Он родился в 1934 году в Смоленской области в крестьянской семье. С детства Юрий мечтал о небе, поэтому поступил в военное авиационное училище и стал лётчиком.
+
+12 апреля 1961 года стартовал космический корабль «Восток» с Юрием Гагариным на борту. Полёт длился всего 108 минут, но эти минуты изменили мир. Гагарин первым увидел Землю из космоса и сказал: «Как прекрасна наша планета!»
+
+После возвращения Юрий Алексеевич стал знаменитым на весь мир. Он посетил десятки стран, встречался с людьми, рассказывал о космосе. Гагарин мечтал о новых полётах и готовился к ним, но трагически погиб в 1968 году во время тренировочного полёта.
+
+Имя Юрия Гагарина носят город, улицы, планета, кратер на Луне. Ежегодно 12 апреля в России отмечается День космонавтики. Подвиг Гагарина — пример мужества, силы духа и любви к Родине.`,
+      en: `Yuri Alekseevich Gagarin was the first person to fly into space. He was born in 1934 in the Smolensk region into a peasant family. From childhood Yuri dreamed of the sky, so he entered a military aviation school and became a pilot.
+
+On 12 April 1961, the Vostok spacecraft launched with Yuri Gagarin on board. The flight lasted only 108 minutes, but those minutes changed the world. Gagarin was the first to see the Earth from space and said: "How beautiful our planet is!"
+
+After his return Yuri Alekseevich became famous all over the world. He visited dozens of countries, met people, and spoke about space. Gagarin dreamed of new flights and prepared for them, but tragically died in 1968 during a training flight.
+
+Yuri Gagarin's name is borne by a city, streets, a planet, and a crater on the Moon. Every year on 12 April Russia celebrates Cosmonautics Day. Gagarin's feat is an example of courage, strength of spirit, and love for the Motherland.` }
+  },
+  questions: [
+    { text: { ru: "В какой семье родился Юрий Гагарин?", en: "What family was Yuri Gagarin born into?" } },
+    { text: { ru: "Как называется космический корабль, на котором Гагарин совершил полёт?", en: "What was the name of the spacecraft on which Gagarin flew?" } },
+    { text: { ru: "Сколько длился первый космический полёт?", en: "How long did the first space flight last?" } },
+    { text: { ru: "Как увековечено имя Гагарина?", en: "How is Gagarin's name commemorated?" } },
+    { text: { ru: "Какой подвиг Юрия Гагарина отражён в словах его коллеги? Обоснуйте Ваш ответ, приведя пример из текста.", en: "What feat of Yuri Gagarin is reflected in his colleague's words? Justify your answer with an example from the text." },
+      quote: { ru: "Юрий Гагарин открыл человечеству дорогу в космос. Он показал, что человек способен на невозможное.", en: "\"Yuri Gagarin opened the road to space for humanity. He showed that a human being is capable of the impossible.\"" } }
+  ],
+  topics: [
+    { title: { ru: "Тема 1. Человек на войне (по фотографии)", en: "Topic 1. A person at war (based on a photo)" },
+      type: { ru: "(описание фотографии)", en: "(description of a photo)" },
+      questions: [
+        { ru: "Кто изображён на фотографии?", en: "Who is depicted in the photo?" },
+        { ru: "Во что одет человек?", en: "What is the person wearing?" },
+        { ru: "Где происходит действие?", en: "Where does the action take place?" },
+        { ru: "Какие качества характера проявляет человек?", en: "What character traits does the person show?" }
+      ] },
+    { title: { ru: "Тема 2. Книга, которая мне запомнилась", en: "Topic 2. A book that stayed with me" },
+      type: { ru: "(повествование на основе жизненного опыта)", en: "(narration based on life experience)" },
+      questions: [
+        { ru: "Что это за книга, кто её автор?", en: "What book is it, who is the author?" },
+        { ru: "О чём эта книга?", en: "What is the book about?" },
+        { ru: "Как Вы с ней познакомились?", en: "How did you come across it?" },
+        { ru: "Почему она Вам запомнилась?", en: "Why did it stay with you?" }
+      ] },
+    { title: { ru: "Тема 3. Почему важно быть толерантным?", en: "Topic 3. Why is tolerance important?" },
+      type: { ru: "(рассуждение по поставленному вопросу)", en: "(reasoning on the question)" },
+      questions: [
+        { ru: "Что такое толерантность?", en: "What is tolerance?" },
+        { ru: "Почему в современном мире важно уважать других?", en: "Why is it important to respect others in the modern world?" },
+        { ru: "Как толерантность помогает людям жить вместе?", en: "How does tolerance help people live together?" },
+        { ru: "Приведите пример толерантного поведения.", en: "Give an example of tolerant behaviour." }
+      ] }
+  ]
+};
+
+/* ============================================================
+   ВАРИАНТ C — Дмитрий Менделеев (учёный)
+============================================================ */
+variantsDB["C"] = {
+  text: {
+    title: { ru: "Дмитрий Иванович Менделеев — учёный-химик (170 слов)", en: "Dmitri Mendeleev — chemist (170 words)" },
+    words: 170,
+    body: { ru: `Дмитрий Иванович Менделеев — великий русский учёный, химик, физик, педагог. Он родился в 1834 году в Тобольске в семье директора гимназии. Дмитрий был четырнадцатым ребёнком в семье, но благодаря таланту и трудолюбию стал одним из самых известных учёных мира.
+
+В 1869 году Менделеев открыл периодический закон химических элементов — одно из главных открытий в истории науки. Он составил таблицу, в которой расположил все известные элементы по возрастанию атомной массы. Учёный смог предсказать свойства ещё не открытых элементов, и позже его предсказания полностью подтвердились.
+
+Менделеев занимался не только химией. Он изучал свойства нефти, разрабатывал способы её переработки, исследовал воздухоплавание, интересовался экономикой и сельским хозяйством. Учёный написал более 500 научных работ.
+
+Имя Менделеева носят Российский химико-технологический университет, множество улиц, станция метро. В 1955 году американские учёные назвали в его честь химический элемент — менделевий. Менделеев — символ российской науки, пример служения истине.`,
+      en: `Dmitri Ivanovich Mendeleev was a great Russian scientist, chemist, physicist, and educator. He was born in 1834 in Tobolsk into the family of a gymnasium director. Dmitri was the fourteenth child in the family, but thanks to his talent and diligence he became one of the most famous scientists in the world.
+
+In 1869 Mendeleev discovered the periodic law of chemical elements — one of the greatest discoveries in the history of science. He compiled a table in which he arranged all known elements in order of increasing atomic mass. The scientist was able to predict the properties of elements not yet discovered, and later his predictions were fully confirmed.
+
+Mendeleev was engaged not only in chemistry. He studied the properties of oil, developed methods of its processing, researched aeronautics, and was interested in economics and agriculture. The scientist wrote more than 500 scientific papers.
+
+Mendeleev's name is borne by the Russian University of Chemical Technology, many streets, and a metro station. In 1955 American scientists named a chemical element in his honour — mendelevium. Mendeleev is a symbol of Russian science, an example of service to truth.` }
+  },
+  questions: [
+    { text: { ru: "В каком году родился Дмитрий Иванович Менделеев?", en: "In what year was Dmitri Mendeleev born?" } },
+    { text: { ru: "Какое главное открытие сделал Менделеев?", en: "What was Mendeleev's main discovery?" } },
+    { text: { ru: "Какими ещё науками занимался Менделеев?", en: "What other sciences did Mendeleev study?" } },
+    { text: { ru: "Как увековечено имя Менделеева?", en: "How is Mendeleev's name commemorated?" } },
+    { text: { ru: "Какой вклад Менделеева в науку отражён в словах его современника? Обоснуйте Ваш ответ, приведя пример из текста.", en: "What contribution of Mendeleev to science is reflected in his contemporary's words? Justify your answer with an example from the text." },
+      quote: { ru: "Менделеев — гений, каких мало. Его таблица — это ключ ко всей химии.", en: "\"Mendeleev is a genius of whom there are few. His table is the key to all chemistry.\"" } }
+  ],
+  topics: [
+    { title: { ru: "Тема 1. Учёный за работой (по фотографии)", en: "Topic 1. A scientist at work (based on a photo)" },
+      type: { ru: "(описание фотографии)", en: "(description of a photo)" },
+      questions: [
+        { ru: "Кто изображён на фотографии?", en: "Who is depicted in the photo?" },
+        { ru: "Что делает человек?", en: "What is the person doing?" },
+        { ru: "Где он находится?", en: "Where is he?" },
+        { ru: "Почему его работа важна для общества?", en: "Why is his work important for society?" }
+      ] },
+    { title: { ru: "Тема 2. Учитель, который мне запомнился", en: "Topic 2. A teacher I remember" },
+      type: { ru: "(повествование на основе жизненного опыта)", en: "(narration based on life experience)" },
+      questions: [
+        { ru: "Кто этот учитель, какой предмет он преподавал?", en: "Who is this teacher, what subject did they teach?" },
+        { ru: "Каким он был человеком?", en: "What kind of person were they?" },
+        { ru: "Что запомнилось Вам больше всего?", en: "What do you remember most?" },
+        { ru: "Как он повлиял на Вас?", en: "How did they influence you?" }
+      ] },
+    { title: { ru: "Тема 3. Зачем человеку знания?", en: "Topic 3. Why does a person need knowledge?" },
+      type: { ru: "(рассуждение по поставленному вопросу)", en: "(reasoning on the question)" },
+      questions: [
+        { ru: "Почему знания важны для человека?", en: "Why is knowledge important for a person?" },
+        { ru: "Как знания помогают в жизни?", en: "How does knowledge help in life?" },
+        { ru: "Чему нужно учиться всю жизнь?", en: "What should one learn throughout life?" },
+        { ru: "Приведите пример из жизни, когда знания помогли.", en: "Give an example when knowledge helped." }
+      ] }
+  ]
+};
+
+/* ============================================================
+   ВАРИАНТ D — Анна Ахматова (поэтесса)
+============================================================ */
+variantsDB["D"] = {
+  text: {
+    title: { ru: "Анна Андреевна Ахматова — поэтесса (168 слов)", en: "Anna Akhmatova — poet (168 words)" },
+    words: 168,
+    body: { ru: `Анна Андреевна Ахматова — одна из самых известных русских поэтесс XX века. Она родилась в 1889 году под Одессой в семье морского инженера. Свои первые стихи Анна написала ещё в детстве, а в 1912 году вышел её первый сборник «Вечер», который сразу принёс ей известность.
+
+Ахматова писала о любви, о родине, о войне, о человеческих страданиях. Её стихи отличаются глубокой искренностью, музыкальностью и точностью слова. Поэтесса пережила страшные годы репрессий: её сына арестовали, мужа расстреляли. Но она не переставала писать.
+
+Во время Великой Отечественной войны Ахматова жила в Ленинграде, читала стихи на радио, поддерживала жителей блокадного города. Её поэма «Реквием» стала памятником всем жертвам репрессий.
+
+В 1965 году Ахматовой была вручена почётная докторская степень Оксфордского университета. В 1966 году поэтессы не стало. Имя Анны Ахматовой носят улицы, библиотеки, школы. Её стихи переведены на многие языки мира и продолжают волновать читателей.`,
+      en: `Anna Andreevna Akhmatova was one of the most famous Russian poets of the 20th century. She was born in 1889 near Odessa in the family of a naval engineer. Anna wrote her first poems in childhood, and in 1912 her first collection "Evening" was published, which immediately brought her fame.
+
+Akhmatova wrote about love, about the Motherland, about war, about human suffering. Her poems are distinguished by deep sincerity, musicality, and precision of words. The poet survived the terrible years of repression: her son was arrested, her husband was shot. But she never stopped writing.
+
+During the Great Patriotic War Akhmatova lived in Leningrad, read poems on the radio, and supported the residents of the besieged city. Her poem "Requiem" became a monument to all victims of repression.
+
+In 1965 Akhmatova was awarded an honorary doctorate from Oxford University. In 1966 the poet passed away. Anna Akhmatova's name is borne by streets, libraries, and schools. Her poems have been translated into many languages of the world and continue to move readers.` }
+  },
+  questions: [
+    { text: { ru: "В каком году родилась Анна Ахматова?", en: "In what year was Anna Akhmatova born?" } },
+    { text: { ru: "О чём писала Ахматова?", en: "What did Akhmatova write about?" } },
+    { text: { ru: "Как поэтесса поддерживала жителей блокадного Ленинграда?", en: "How did the poet support the residents of besieged Leningrad?" } },
+    { text: { ru: "Как увековечено имя Ахматовой?", en: "How is Akhmatova's name commemorated?" } },
+    { text: { ru: "Какой вклад Ахматовой в культуру отражён в словах её современника? Обоснуйте Ваш ответ, приведя пример из текста.", en: "What contribution of Akhmatova to culture is reflected in her contemporary's words? Justify your answer with an example from the text." },
+      quote: { ru: "Ахматова — это голос целого поколения. Её стихи — это совесть России.", en: "\"Akhmatova is the voice of an entire generation. Her poems are the conscience of Russia.\"" } }
+  ],
+  topics: [
+    { title: { ru: "Тема 1. Поэт за работой (по фотографии)", en: "Topic 1. A poet at work (based on a photo)" },
+      type: { ru: "(описание фотографии)", en: "(description of a photo)" },
+      questions: [
+        { ru: "Кто изображён на фотографии?", en: "Who is depicted in the photo?" },
+        { ru: "Что делает человек?", en: "What is the person doing?" },
+        { ru: "Где происходит действие?", en: "Where does the action take place?" },
+        { ru: "Почему его творчество важно для людей?", en: "Why is their work important for people?" }
+      ] },
+    { title: { ru: "Тема 2. Стихотворение, которое мне запомнилось", en: "Topic 2. A poem I remember" },
+      type: { ru: "(повествование на основе жизненного опыта)", en: "(narration based on life experience)" },
+      questions: [
+        { ru: "Что это за стихотворение, кто его автор?", en: "What poem is it, who is the author?" },
+        { ru: "О чём это стихотворение?", en: "What is the poem about?" },
+        { ru: "Как Вы с ним познакомились?", en: "How did you come across it?" },
+        { ru: "Почему оно Вам запомнилось?", en: "Why did it stay with you?" }
+      ] },
+    { title: { ru: "Тема 3. Что такое настоящая любовь к Родине?", en: "Topic 3. What is true love for the Motherland?" },
+      type: { ru: "(рассуждение по поставленному вопросу)", en: "(reasoning on the question)" },
+      questions: [
+        { ru: "Что значит любить Родину?", en: "What does it mean to love the Motherland?" },
+        { ru: "Как можно проявить любовь к Родине в повседневной жизни?", en: "How can you show love for the Motherland in everyday life?" },
+        { ru: "Почему важно сохранять память о прошлом?", en: "Why is it important to preserve the memory of the past?" },
+        { ru: "Приведите пример настоящей любви к Родине.", en: "Give an example of true love for the Motherland." }
+      ] }
+  ]
+};
+
+/* ============================================================
+   НОВЫЕ ФУНКЦИИ: СЧЁТЧИК ПРЕДЛОЖЕНИЙ
+============================================================ */
+function countSentences(text) {
+  if (!text || !text.trim()) return 0;
+  const matches = text.match(/[^.!?]+[.!?]+(\s|$)/g);
+  return matches ? matches.length : (text.trim().length > 15 ? 1 : 0);
+}
+
+function updateTask3Answer(val) {
+  setAnswer("task3", "answer", val);
+  const count = countSentences(val);
+  const counterEl = document.getElementById("sentenceCounter");
+  if (counterEl) {
+    const isOk = count >= 10;
+    counterEl.innerHTML = `Предложений: ${count} / 10 ${isOk ? '✅' : '⚠️'}`;
+    counterEl.style.color = isOk ? "var(--green)" : "var(--red)";
+  }
+  updateStats();
+  updateSummary();
+}
+
+/* ============================================================
+   ПЕРЕКЛЮЧАТЕЛИ
+============================================================ */
+function renderVariantButtons() {
+  const box = document.getElementById("variantButtons");
+  if (!box) return;
+  box.innerHTML = VARIANTS.map(v =>
+    `<button class="selector-btn ${v === currentVariant ? "active" : ""}" onclick="setVariant('${v}')">${v}</button>`
+  ).join("");
+}
+function setVariant(v) {
+  currentVariant = v;
+  renderVariantButtons();
+  renderTrainer();
+  updateStats();
+  updateSummary();
+}
+function resetVariant() {
+  if (!confirm(I18N[currentLang].resetConfirm)) return;
+  const prefix = currentVariant + "_";
+  Object.keys(answers).forEach(k => { if (k.startsWith(prefix)) delete answers[k]; });
+  Object.keys(activeTimers).forEach(k => { if (k.startsWith(prefix)) { if (activeTimers[k].interval) clearInterval(activeTimers[k].interval); delete activeTimers[k]; } });
+  renderTrainer();
+  updateStats();
+  updateSummary();
+}
+
+/* ============================================================
+   ТАЙМЕРЫ
+============================================================ */
+function formatTime(sec) {
+  const m = Math.floor(sec / 60), s = sec % 60;
+  return `${String(m).padStart(2, "0")}:${String(s).padStart(2, "0")}`;
+}
+function startTimer(timerId, totalSeconds) {
+  if (activeTimers[timerId] && activeTimers[timerId].running) return;
+  if (!activeTimers[timerId]) {
+    activeTimers[timerId] = { remaining: totalSeconds, running: false, interval: null, total: totalSeconds };
+  }
+  const t = activeTimers[timerId];
+  t.running = true;
+  t.interval = setInterval(() => {
+    t.remaining--;
+    updateTimerDisplay(timerId);
+    if (t.remaining <= 0) {
+      clearInterval(t.interval);
+      t.interval = null;
+      t.running = false;
+      updateTimerDisplay(timerId);
+      updateTimerButton(timerId);
+      alert(I18N[currentLang].timerUp);
+    }
+  }, 1000);
+  updateTimerButton(timerId);
+}
+function pauseTimer(timerId) {
+  const t = activeTimers[timerId];
+  if (!t) return;
+  if (t.interval) clearInterval(t.interval);
+  t.interval = null;
+  t.running = false;
+  updateTimerButton(timerId);
+}
+function resetTimer(timerId, totalSeconds) {
+  const t = activeTimers[timerId];
+  if (t && t.interval) clearInterval(t.interval);
+  activeTimers[timerId] = { remaining: totalSeconds, running: false, interval: null, total: totalSeconds };
+  updateTimerDisplay(timerId);
+  updateTimerButton(timerId);
+}
+function toggleTimer(timerId, totalSeconds) {
+  const t = activeTimers[timerId];
+  if (!t) { startTimer(timerId, totalSeconds); return; }
+  if (t.running) pauseTimer(timerId);
+  else startTimer(timerId, totalSeconds);
+}
+function updateTimerDisplay(timerId) {
+  const el = document.getElementById("timer_" + timerId);
+  const widget = document.getElementById("timerWidget_" + timerId);
+  const t = activeTimers[timerId];
+  if (!el || !t) return;
+  el.textContent = formatTime(Math.max(0, t.remaining));
+  if (widget) {
+    widget.classList.toggle("warning", t.remaining <= 60 && t.remaining > 20);
+    widget.classList.toggle("danger", t.remaining <= 20);
+  }
+}
+function updateTimerButton(timerId) {
+  const btn = document.getElementById("timerBtn_" + timerId);
+  const t = activeTimers[timerId];
+  if (btn && t) btn.textContent = t.running ? I18N[currentLang].timerPause : I18N[currentLang].timerStart;
+}
+
+/* ============================================================
+   РЕНДЕР ТРЕНАЖЁРА
+============================================================ */
+function renderTrainer() {
+  const L = I18N[currentLang];
+  const v = variantsDB[currentVariant];
+  const container = document.getElementById("trainerContent");
+  if (!v) { container.innerHTML = `<div class="task-block"><p style="color:var(--muted);">Вариант ещё не добавлен. Проверьте консоль.</p></div>`; return; }
+
+  const savedTopic = getAnswer("task3").selectedTopic;
+
+  let html = "";
+
+  /* ---------- ЗАДАНИЕ 1 ---------- */
+  const t1 = getAnswer("task1");
+  const timerId1 = stateKey(currentVariant, "timerPrep");
+  if (!activeTimers[timerId1]) activeTimers[timerId1] = { remaining: 300, running: false, interval: null, total: 300 };
+  html += `<div class="task-block">
+    <div class="task-header">
+      <div>
+        <span class="task-number mod1">${escapeHtml(L.task1Title)}</span>
+        <p class="task-sub" style="margin:8px 0 0;">${escapeHtml(L.task1Sub)}</p>
+      </div>
+      <div class="task-timer" id="timerWidget_${timerId1}">
+        <span>⏱ ${escapeHtml(L.task1Timer)}:</span>
+        <span id="timer_${timerId1}">05:00</span>
+        <button class="task-timer-btn" id="timerBtn_${timerId1}" onclick="toggleTimer('${timerId1}', 300)">▶</button>
+        <button class="task-timer-btn" onclick="resetTimer('${timerId1}', 300)">↺</button>
+      </div>
+    </div>
+    <div class="text-box">
+      <div style="font-weight:800;color:var(--accent);margin-bottom:8px;">📖 ${escapeHtml(L.textOfText)}: ${escapeHtml(loc(v.text.title))}</div>
+      ${escapeHtml(loc(v.text.body))}
+      <div class="text-meta">${v.text.words} ${escapeHtml(L.textMeta)}</div>
+    </div>
+    
+    <!-- УЛУЧШЕНИЕ 3: Акцент на Вопросе 5 во время чтения -->
+    <div class="question-block" style="border-color:var(--orange);background:rgba(245,158,11,.08);">
+      <span class="q-label" style="color:var(--orange);">❗ ВАЖНО ДЛЯ ПОДГОТОВКИ</span>
+      <p class="q-text" style="font-size:14px;">Пока вы читаете текст, обратите внимание на информацию, которая понадобится для <strong>Вопроса 5</strong> (с цитатой) из Задания 2:</p>
+      <div class="q-quote" style="background:rgba(255,255,255,0.05);border:1px solid var(--orange);">
+        «${escapeHtml(loc(v.questions[4].quote))}»
+      </div>
+    </div>
+
+    <div class="writing-area">
+      <label style="display:block;font-size:13px;color:var(--muted);font-weight:700;margin-bottom:6px;">
+        <input type="checkbox" id="readCheck_${currentVariant}" ${t1.readAloud ? "checked" : ""} onchange="markReadAloud(this.checked)" style="accent-color:var(--accent);" />
+        ${escapeHtml(L.textReadCheckbox)}
+      </label>
+      <label style="display:block;font-size:13px;color:var(--muted);font-weight:700;margin:10px 0 6px;">${escapeHtml(L.notesLabel)}</label>
+      <textarea placeholder="${escapeHtml(L.notesPlaceholder)}" oninput="setAnswer('task1','notes',this.value)">${escapeHtml(t1.notes || "")}</textarea>
+    </div>
+  </div>`;
+
+  /* ---------- ЗАДАНИЕ 2 ---------- */
+  html += `<div class="task-block">
+    <div class="task-header">
+      <div>
+        <span class="task-number mod2">${escapeHtml(L.task2Title)}</span>
+        <p class="task-sub" style="margin:8px 0 0;">${escapeHtml(L.task2Sub)}</p>
+      </div>
+    </div>
+    <div style="font-weight:800;color:var(--accent);margin:12px 0 6px;">💬 ${escapeHtml(L.questionsTitle)}</div>`;
+  v.questions.forEach((q, i) => {
+    const qKey = "q" + (i + 1);
+    html += `<div class="question-block">
+      <span class="q-label">${escapeHtml(L.questionLabel)} ${i + 1}</span>
+      <p class="q-text">${escapeHtml(loc(q.text))}</p>
+      ${q.quote ? `<div class="q-quote"><strong>${escapeHtml(L.citationLabel)}:</strong> «${escapeHtml(loc(q.quote))}»</div>` : ""}
+      <div class="writing-area">
+        <textarea placeholder="${escapeHtml(L.answerPlaceholder)}" oninput="setAnswer('task2','${qKey}',this.value)">${escapeHtml(getAnswer("task2")[qKey] || "")}</textarea>
+      </div>
+    </div>`;
+  });
+  html += `</div>`;
+
+  /* ---------- ЗАДАНИЕ 3 ---------- */
+  const monologPrepTimerId = stateKey(currentVariant, "timerMonologPrep");
+  const monologAnswerTimerId = stateKey(currentVariant, "timerMonologAnswer");
+  if (!activeTimers[monologPrepTimerId]) activeTimers[monologPrepTimerId] = { remaining: 120, running: false, interval: null, total: 120 };
+  if (!activeTimers[monologAnswerTimerId]) activeTimers[monologAnswerTimerId] = { remaining: 180, running: false, interval: null, total: 180 };
+  
+  html += `<div class="task-block">
+    <div class="task-header">
+      <div>
+        <span class="task-number mod3">${escapeHtml(L.task3Title)}</span>
+        <p class="task-sub" style="margin:8px 0 0;">${escapeHtml(L.task3Sub)}</p>
+      </div>
+      <!-- УЛУЧШЕНИЕ 2: Два таймера для Задания 3 -->
+      <div style="display:flex;gap:8px;flex-wrap:wrap;">
+        <div class="task-timer" id="timerWidget_${monologPrepTimerId}">
+          <span>⏱ ${escapeHtml(L.task3Timer)}:</span>
+          <span id="timer_${monologPrepTimerId}">02:00</span>
+          <button class="task-timer-btn" id="timerBtn_${monologPrepTimerId}" onclick="toggleTimer('${monologPrepTimerId}', 120)">▶</button>
+          <button class="task-timer-btn" onclick="resetTimer('${monologPrepTimerId}', 120)">↺</button>
+        </div>
+        <div class="task-timer" id="timerWidget_${monologAnswerTimerId}" style="border-color:var(--green-border);background:var(--green-light);">
+          <span style="color:var(--green);">⏱ ${escapeHtml(L.task3AnswerTimer)}:</span>
+          <span id="timer_${monologAnswerTimerId}" style="color:var(--green);">03:00</span>
+          <button class="task-timer-btn" id="timerBtn_${monologAnswerTimerId}" onclick="toggleTimer('${monologAnswerTimerId}', 180)" style="color:var(--green);">▶</button>
+          <button class="task-timer-btn" onclick="resetTimer('${monologAnswerTimerId}', 180)" style="color:var(--green);">↺</button>
+        </div>
+      </div>
+    </div>
+    <p style="color:var(--muted);font-size:13px;">${escapeHtml(L.topicsLabel)} <em>(${escapeHtml(L.topicsChooseHint)})</em></p>
+    <div class="topics-grid">`;
+  v.topics.forEach((t, i) => {
+    const sel = savedTopic === i ? "selected" : "";
+    html += `<div class="topic-card ${sel}" onclick="selectTopic(${i})">
+      <h4>${escapeHtml(loc(t.title))}</h4>
+      <div style="font-size:12px;color:var(--muted);">${escapeHtml(loc(t.type))}</div>
+      <ul>${t.questions.map(q => `<li>${escapeHtml(loc(q))}</li>`).join("")}</ul>
+    </div>`;
+  });
+  html += `</div>`;
+  
+  const t3 = getAnswer("task3");
+  if (savedTopic !== null && savedTopic !== undefined && v.topics[savedTopic]) {
+    const sentCount = countSentences(t3.answer || "");
+    const isOk = sentCount >= 10;
+    // УЛУЧШЕНИЕ 1: Счётчик предложений
+    html += `<div class="writing-area" style="margin-top:14px;">
+      <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:6px;">
+        <label style="font-size:13px;color:var(--muted);font-weight:700;">${escapeHtml(L.answerLabel)}</label>
+        <span id="sentenceCounter" style="font-size:12px;font-weight:800;color:${isOk ? 'var(--green)' : 'var(--red)'};">
+          Предложений: ${sentCount} / 10 ${isOk ? '✅' : '⚠️'}
+        </span>
+      </div>
+      <textarea id="task3Textarea" placeholder="${escapeHtml(L.answerPlaceholder)}" oninput="updateTask3Answer(this.value)" style="min-height:160px;">${escapeHtml(t3.answer || "")}</textarea>
+    </div>`;
+  }
+  html += `</div>`;
+
+  /* ---------- САМООЦЕНКА ---------- */
+  html += renderSelfCheck();
+
+  container.innerHTML = html;
+
+  updateTimerDisplay(timerId1);
+  updateTimerButton(timerId1);
+  updateTimerDisplay(monologPrepTimerId);
+  updateTimerButton(monologPrepTimerId);
+  updateTimerDisplay(monologAnswerTimerId);
+  updateTimerButton(monologAnswerTimerId);
+}
+
+function renderSelfCheck() {
+  const L = I18N[currentLang];
+  const t1 = getAnswer("task1"), t2 = getAnswer("task2"), t3 = getAnswer("task3"), t4 = getAnswer("task4");
+  let html = `<div class="task-block">
+    <div class="task-header"><span class="task-number mod4">${escapeHtml(L.task4Title)}</span></div>
+    <p class="task-sub">${escapeHtml(L.selfCheckTitle)}</p>`;
+
+  html += `<div class="criteria-block"><h4>${escapeHtml(L.criteriaTask1)}</h4>`;
+  ["Ч1","Ч2","Ч3"].forEach(code => { html += renderCriteriaRow(code, t1, "task1"); });
+  html += `</div>`;
+
+  html += `<div class="criteria-block"><h4>${escapeHtml(L.criteriaTask2)}</h4>`;
+  ["Д1","Д2","Д3","Д4","Д5"].forEach(code => { html += renderCriteriaRow(code, t2, "task2"); });
+  html += `</div>`;
+
+  html += `<div class="criteria-block"><h4>${escapeHtml(L.criteriaTask3)}</h4>`;
+  ["М1","М2"].forEach(code => { html += renderCriteriaRow(code, t3, "task3"); });
+  html += `</div>`;
+
+  html += `<div class="criteria-block"><h4>${escapeHtml(L.criteriaTask4)}</h4>`;
+  ["Р1","Р2","Р3"].forEach(code => { html += renderCriteriaRow(code, t4, "task4"); });
+  html += `</div></div>`;
+  return html;
+}
+
+function renderCriteriaRow(code, savedObj, taskId) {
+  const L = I18N[currentLang];
+  const crit = L.criteria[code];
+  const saved = savedObj[code];
+  let radios = "";
+  for (let i = crit.max; i >= 0; i--) {
+    const checked = saved === i ? "checked" : "";
+    radios += `<label><input type="radio" name="${taskId}_${code}" value="${i}" ${checked} onchange="setCriteria('${taskId}','${code}',${i})" /><span>${i}</span></label>`;
+  }
+  const critText = currentLang === "ru" ? crit.ru : crit.en;
+  return `<div class="criteria-row">
+    <div class="crit-label"><strong>${code}</strong>${escapeHtml(critText)} <em style="color:var(--muted);">(${crit.max} ${escapeHtml(L.pointsLabel)})</em></div>
+    <div class="crit-options">${radios}</div>
+  </div>`;
+}
+
+/* ============================================================
+   ОБРАБОТЧИКИ
+============================================================ */
+function setCriteria(taskId, code, val) {
+  setAnswer(taskId, code, val);
+  updateStats();
+  updateSummary();
+}
+function selectTopic(idx) {
+  setAnswer("task3", "selectedTopic", idx);
+  renderTrainer();
+  updateStats();
+  updateSummary();
+}
+function markReadAloud(val) {
+  setAnswer("task1", "readAloud", val);
+  updateStats();
+  updateSummary();
+}
+
+/* ============================================================
+   СТАТИСТИКА
+============================================================ */
+function calculateTotal() {
+  const t1 = getAnswer("task1"), t2 = getAnswer("task2"), t3 = getAnswer("task3"), t4 = getAnswer("task4");
+  const reading = (t1["Ч1"] || 0) + (t1["Ч2"] || 0) + (t1["Ч3"] || 0);
+  const dialog = (t2["Д1"] || 0) + (t2["Д2"] || 0) + (t2["Д3"] || 0) + (t2["Д4"] || 0) + (t2["Д5"] || 0);
+  const monolog = (t3["М1"] || 0) + (t3["М2"] || 0);
+  const speech = (t4["Р1"] || 0) + (t4["Р2"] || 0) + (t4["Р3"] || 0);
+  const total = reading + dialog + monolog + speech;
+  const filled = countFilledCriteria();
+  return { reading, dialog, monolog, speech, total, filled };
+}
+function countFilledCriteria() {
+  const t1 = getAnswer("task1"), t2 = getAnswer("task2"), t3 = getAnswer("task3"), t4 = getAnswer("task4");
+  let n = 0;
+  ["Ч1","Ч2","Ч3"].forEach(c => { if (t1[c] !== undefined) n++; });
+  ["Д1","Д2","Д3","Д4","Д5"].forEach(c => { if (t2[c] !== undefined) n++; });
+  ["М1","М2"].forEach(c => { if (t3[c] !== undefined) n++; });
+  ["Р1","Р2","Р3"].forEach(c => { if (t4[c] !== undefined) n++; });
+  return n;
+}
+function updateStats() {
+  const r = calculateTotal();
+  const totalMax = MAX_SCORE;
+  const filledPct = Math.round((r.filled / 13) * 100);
+  document.getElementById("scoreDisplay").textContent = r.total + "/" + totalMax;
+  const verdictEl = document.getElementById("verdictDisplay");
+  if (r.filled === 0) verdictEl.textContent = "—";
+  else verdictEl.textContent = r.total >= PASS_SCORE ? "✅" : "❌";
+  verdictEl.style.color = r.total >= PASS_SCORE ? "var(--green)" : "var(--red)";
+  document.getElementById("progressDisplay").textContent = filledPct + "%";
+  document.getElementById("overall").value = filledPct;
+}
+function updateSummary() {
+  const L = I18N[currentLang];
+  const r = calculateTotal();
+  const box = document.getElementById("summaryBox");
+  const passed = r.total >= PASS_SCORE;
+  const cls = passed ? "passed" : "failed";
+  const verdict = passed ? L.summaryPassed : L.summaryFailed;
+  const hint = passed ? L.summaryHintPassed : L.summaryHintFailed;
+  box.innerHTML = `<div class="summary ${cls}">
+    <div class="score">${r.total} / ${MAX_SCORE}</div>
+    <p style="margin:8px 0;font-size:22px;font-weight:900;">${escapeHtml(verdict)}</p>
+    <p style="margin:6px 0;color:var(--muted);">${escapeHtml(hint)}</p>
+    <table class="reference-table" style="max-width:420px;margin:16px auto 0;">
+      <tr><th>${escapeHtml(L.summaryScoreByBlock)}</th><th>${L.pointsLabel}</th></tr>
+      <tr><td>📖 ${escapeHtml(L.blockReading)}</td><td>${r.reading} / 3</td></tr>
+      <tr><td>💬 ${escapeHtml(L.blockDialog)}</td><td>${r.dialog} / 5</td></tr>
+      <tr><td>🎤 ${escapeHtml(L.blockMonolog)}</td><td>${r.monolog} / 3</td></tr>
+      <tr><td>📝 ${escapeHtml(L.blockSpeech)}</td><td>${r.speech} / 6</td></tr>
+      <tr><td><strong>ИТОГО</strong></td><td><strong>${r.total} / 17</strong></td></tr>
+    </table>
+    <p style="margin:12px 0 0;color:var(--muted);font-size:12px;">${escapeHtml(L.summaryFilled)}: ${r.filled} ${escapeHtml(L.summaryOf)} 13</p>
+  </div>`;
+}
+
+/* ============================================================
+   СПРАВОЧНИК
+============================================================ */
+function renderReferences() {
+  const L = I18N[currentLang];
+  document.getElementById("refsGrid").innerHTML = `
+    <div class="card danger-card">
+      <h3>${escapeHtml(L.refScaleTitle)}</h3>
+      <table class="reference-table">
+        <tr><th>${escapeHtml(L.refScaleColPoints)}</th><th>${escapeHtml(L.refScaleColResult)}</th></tr>
+        <tr><td>${escapeHtml(L.refScalePass)}</td><td>${escapeHtml(L.refScalePassLabel)}</td></tr>
+        <tr><td>${escapeHtml(L.refScaleFail)}</td><td>${escapeHtml(L.refScaleFailLabel)}</td></tr>
+      </table>
+      <p style="font-size:12px;margin-top:8px;color:var(--muted);">${escapeHtml(L.refScaleNote)}</p>
+    </div>
+    <div class="card info-card">
+      <h3>${escapeHtml(L.criteriaTask1)}</h3>
+      <table class="reference-table">
+        <tr><th>Критерий</th><th>Макс.</th></tr>
+        <tr><td>Ч1 — интонация</td><td>1</td></tr>
+        <tr><td>Ч2 — темп чтения</td><td>1</td></tr>
+        <tr><td>Ч3 — искажения слов</td><td>1</td></tr>
+        <tr><td><strong>Итого</strong></td><td><strong>3</strong></td></tr>
+      </table>
+    </div>
+    <div class="card success-card">
+      <h3>${escapeHtml(L.criteriaTask2)}</h3>
+      <table class="reference-table">
+        <tr><th>Критерий</th><th>Макс.</th></tr>
+        <tr><td>Д1–Д5 — ответы на вопросы</td><td>по 1 б.</td></tr>
+        <tr><td><strong>Итого</strong></td><td><strong>5</strong></td></tr>
+      </table>
+    </div>
+    <div class="card warn-card">
+      <h3>${escapeHtml(L.criteriaTask3)}</h3>
+      <table class="reference-table">
+        <tr><th>Критерий</th><th>Макс.</th></tr>
+        <tr><td>М1 — коммуникативная задача</td><td>2</td></tr>
+        <tr><td>М2 — логичность</td><td>1</td></tr>
+        <tr><td><strong>Итого</strong></td><td><strong>3</strong></td></tr>
+      </table>
+    </div>
+    <div class="card purple-card">
+      <h3>${escapeHtml(L.criteriaTask4)}</h3>
+      <table class="reference-table">
+        <tr><th>Критерий</th><th>Макс.</th></tr>
+        <tr><td>Р1 — орфоэпия</td><td>2</td></tr>
+        <tr><td>Р2 — грамматика</td><td>2</td></tr>
+        <tr><td>Р3 — речевые нормы</td><td>2</td></tr>
+        <tr><td><strong>Итого</strong></td><td><strong>6</strong></td></tr>
+      </table>
+    </div>`;
+}
+function renderRefRules() {
+  const L = I18N[currentLang];
+  document.getElementById("refRulesList").innerHTML = L.refRulesList.map(r => `<li>${escapeHtml(r)}</li>`).join("");
+}
+
+/* ============================================================
+   ТЕМА / ЯЗЫК
+============================================================ */
+function applyTheme() {
+  document.documentElement.setAttribute("data-theme", currentTheme);
+  const icon = document.getElementById("themeIcon");
+  if (icon) icon.textContent = currentTheme === "dark" ? "🌙" : "☀️";
+}
+function toggleTheme() { currentTheme = currentTheme === "dark" ? "light" : "dark"; applyTheme(); }
+function applyUIText() {
+  const L = I18N[currentLang];
+  document.title = L.docTitle;
+  document.documentElement.lang = currentLang;
+  document.querySelectorAll("[data-i18n]").forEach(el => {
+    const key = el.dataset.i18n;
+    if (L[key] != null) el.innerHTML = L[key];
+  });
+}
+function setLang(lang) {
+  currentLang = lang;
+  document.querySelectorAll(".lang-option").forEach(sp => sp.classList.toggle("active", sp.dataset.lang === lang));
+  applyUIText(); renderAll();
+}
+
+/* ============================================================
+   ЭКСПОРТ / КОПИРОВАНИЕ
+============================================================ */
+function exportResults() {
+  const L = I18N[currentLang];
+  const r = calculateTotal();
+  const v = variantsDB[currentVariant];
+  let lines = [];
+  lines.push("=== Итоговое собеседование 2027 • Русский язык • 9 класс ===");
+  lines.push("Дата: " + new Date().toLocaleString());
+  lines.push("Вариант: " + currentVariant);
+  lines.push("");
+  lines.push("ИТОГО: " + r.total + " / " + MAX_SCORE);
+  lines.push("Вердикт: " + (r.total >= PASS_SCORE ? "ЗАЧЁТ" : "НЕ ЗАЧЁТ"));
+  lines.push("");
+  lines.push("--- По блокам ---");
+  lines.push("Чтение: " + r.reading + "/3");
+  lines.push("Беседа: " + r.dialog + "/5");
+  lines.push("Монолог: " + r.monolog + "/3");
+  lines.push("Грамотность: " + r.speech + "/6");
+  lines.push("");
+  lines.push("--- Ответы ---");
+  if (v) {
+    lines.push("Текст: " + loc(v.text.title));
+    v.questions.forEach((q, i) => {
+      const a = getAnswer("task2")["q" + (i + 1)] || "—";
+      lines.push(`Вопрос ${i + 1}: ${loc(q.text)}`);
+      lines.push(`Ответ: ${String(a).slice(0, 200)}`);
+      lines.push("");
+    });
+  }
+  const blob = new Blob([lines.join("\n")], { type: "text/plain;charset=utf-8" });
+  const url = URL.createObjectURL(blob);
+  const a2 = document.createElement("a");
+  a2.href = url;
+  a2.download = `final-interview-2027-${currentVariant}-${Date.now()}.txt`;
+  document.body.appendChild(a2); a2.click(); document.body.removeChild(a2);
+  URL.revokeObjectURL(url);
+  const status = document.getElementById("copyStatus");
+  if (status) { status.textContent = L.exportDone; setTimeout(() => status.textContent = "", 2500); }
+}
+function copyPhone() {
+  const phone = "89202275676";
+  const status = document.getElementById("copyStatus");
+  const L = I18N[currentLang];
+  const show = () => { status.textContent = L.copied; setTimeout(() => status.textContent = "", 2500); };
+  if (navigator.clipboard && window.isSecureContext) navigator.clipboard.writeText(phone).then(show).catch(() => fallbackCopy(phone, show));
+  else fallbackCopy(phone, show);
+}
+function fallbackCopy(text, cb) {
+  const t = document.createElement("textarea"); t.value = text; t.style.position = "fixed"; t.style.opacity = "0";
+  document.body.appendChild(t); t.focus(); t.select();
+  try { document.execCommand("copy"); cb(); } catch (e) { alert(I18N[currentLang].copyFail + text); }
+  document.body.removeChild(t);
+}
+
+/* ============================================================
+   ИНИЦИАЛИЗАЦИЯ
+============================================================ */
+function renderAll() {
+  applyUIText();
+  renderStructureCards();
+  renderVariantButtons();
+  renderTrainer();
+  renderReferences();
+  renderRefRules();
+  updateStats();
+  updateSummary();
+}
+document.addEventListener("DOMContentLoaded", () => {
+  applyTheme();
+  renderAll();
+  document.getElementById("themeToggle").addEventListener("click", toggleTheme);
+  document.getElementById("langToggle").addEventListener("click", () => setLang(currentLang === "ru" ? "en" : "ru"));
+});
+</script>
+</body>
+</html>
